@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
 
     private SpriteRenderer spriteRendererPlayer;
+    public Animator anim;
 
     public int maxHP;
     public int currentHP;
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
         currentHP = maxHP;
 
         spriteRendererPlayer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -52,6 +54,7 @@ public class PlayerController : MonoBehaviour
                 FindObjectOfType<scoreManager>().reduceScore(scoreToReduce);
                 //death
                 //Debug.Log("death");
+                anim.SetTrigger("Dead");
 
                 LevelManager.instance.RespawnPlayer();
             }

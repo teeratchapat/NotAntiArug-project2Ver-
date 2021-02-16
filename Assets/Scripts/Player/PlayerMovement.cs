@@ -7,11 +7,15 @@ public class PlayerMovement : MonoBehaviour
     // serializeField make private variable can edit by unity inspector
     public static PlayerMovement instance;
 
+    public Animator anim;
+
     // object variable
     public GameObject bulletPrefab;
     private Rigidbody2D playerRigidbody2d;
     public SpriteRenderer playerSpriteRenderer;
     public Transform aim;
+    public Transform groundCheckpoint;
+    public LayerMask whatIsGround;
 
     // facing variable
     private bool facingRight = true;
@@ -21,8 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveHorizontal;
 
     //jump variable
-    public int maxJump = 2;
-    public int jumpcount = 0;
+    public bool isGround = false;
+    public bool isCanDoubleJump = false;
     public int jumpForce = 15;
 
     //fire variable
@@ -37,12 +41,24 @@ public class PlayerMovement : MonoBehaviour
     {
         instance = this;
         playerRigidbody2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        isGround = Physics2D.OverlapCircle(groundCheckpoint.position, 0.2f, whatIsGround);
+
+        if (isGround)
+        {
+            anim.SetBool("isGround", true);
+            isCanDoubleJump = true;
+        }
+        else
+        {
+            anim.SetBool("isGround", false);
+        }
         //jump
-        if (Input.GetButtonDown("Jump") && jumpcount < maxJump /*&& nextJump < Time.time*/)
+        if (Input.GetButtonDown("Jump") /*&& jumpcount < maxJump && nextJump < Time.time*/)
         {
             jump();
         }
@@ -51,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && nextFire < Time.time)
         {
             shoot();
+            anim.SetTrigger("Shoot");
         }
 
         //change bullets
@@ -69,17 +86,17 @@ public class PlayerMovement : MonoBehaviour
 
         //facing handle
         if (moveHorizontal < 0) {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
             facingRight = false;
         } else if (moveHorizontal > 0) {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
             facingRight = true;
         } else {
 
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    /*private void OnCollisionStay2D(Collision2D collision)
     {
         //monitor what player hit
         //Debug.Log("onCollisionEnter2D  name : " + collision.gameObject.name + "    tag : " + collision.gameObject.tag);
@@ -87,15 +104,29 @@ public class PlayerMovement : MonoBehaviour
         //reset jumpcount when player hit the Ground
         if (collision.gameObject.tag == "Platform") {
             jumpcount = 0;
+            anim.SetBool("isGround", true);
         }
-    }
+    }*/
 
     private void jump()
     {
-        playerRigidbody2d.velocity = new Vector2(playerRigidbody2d.velocity.x, jumpForce);
-        jumpcount = jumpcount + 1;
-        Debug.Log("jump " + jumpcount);
         
+
+        if (isGround)
+        {
+            playerRigidbody2d.velocity = new Vector2(playerRigidbody2d.velocity.x, jumpForce);
+        }
+        else
+        {
+            if (isCanDoubleJump)
+            {
+                playerRigidbody2d.velocity = new Vector2(playerRigidbody2d.velocity.x, jumpForce);
+                isCanDoubleJump = false;
+            }
+        }
+        
+
+       
     }
 
     private void shoot()

@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: e66da80b51ec3f342adb63c6ab9ed299
+guid: 87cb3934deed0b64db4c936098be5bb7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -704459396801619952
-    second: "\u0E1B\u0E49\u0E32\u0E22\u0E40\u0E01\u0E34\u0E14_0"
-  - first:
-      213: 1982734929119423963
-    second: "\u0E1B\u0E49\u0E32\u0E22\u0E40\u0E01\u0E34\u0E14_1"
+      213: 4344708108446789553
+    second: "\u0E1E\u0E37\u0E49\u0E19\u0E01\u0E32\u0E27_0"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0E1B\u0E49\u0E32\u0E22\u0E40\u0E01\u0E34\u0E14_0"
+      name: "\u0E1E\u0E37\u0E49\u0E19\u0E01\u0E32\u0E27_0"
       rect:
         serializedVersion: 2
-        x: 3
-        y: 15
-        width: 58
-        height: 66
+        x: 4
+        y: 50
+        width: 41
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,29 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01814f639e14936f0800000000000000
-      internalID: -704459396801619952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0E1B\u0E49\u0E32\u0E22\u0E40\u0E01\u0E34\u0E14_1"
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 15
-        width: 58
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdd2cedb9e6148b10800000000000000
-      internalID: 1982734929119423963
+      spriteID: 1bfeab061018b4c30800000000000000
+      internalID: 4344708108446789553
       vertices: []
       indices: 
       edges: []

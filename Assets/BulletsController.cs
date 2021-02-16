@@ -15,8 +15,8 @@ public class BulletsController : MonoBehaviour
     {
         instance = this;
 
-        bullets.Add(new Bullets(1, "aaa", 100, 1, "best bullet forever", sprites[0], bulletsPrefab[0]));
-        bullets.Add(new Bullets(2, "bbb", 100, 1, "boom", sprites[1], bulletsPrefab[1]));
+        bullets.Add(new Bullets(1, "สลายยาเสพติดประเภท 1", 20, 1, "best bullet forever", sprites[0], bulletsPrefab[0]));
+        bullets.Add(new Bullets(2, "สลายยาเสพติดประเภท 2", 20, 1, "boom", sprites[1], bulletsPrefab[1]));
 
         Debug.Log(bullets[0].bulletsName);
         Debug.Log(bullets[1].bulletsName);

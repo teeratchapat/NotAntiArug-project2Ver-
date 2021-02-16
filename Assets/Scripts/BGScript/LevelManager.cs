@@ -12,18 +12,7 @@ public class LevelManager : MonoBehaviour
     {
         instance = this;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+  
     public void RespawnPlayer()
     {
         StartCoroutine(RespawnCo());
@@ -36,9 +25,8 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(waitToRespawn);
 
         PlayerController.instance.gameObject.SetActive(true);
-        PlayerController.instance.healDamage(PlayerController.instance.maxHP);
+        PlayerController.instance.currentHP = 50;
         PlayerController.instance.transform.position = CheckPointController.instance.spawnPoint;
-
     }
 
 }

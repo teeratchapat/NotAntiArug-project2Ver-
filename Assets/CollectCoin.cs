@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class CollectCoin : MonoBehaviour
 {
-    public int bulletsToAdd = 10;
-    public int bulletID = 1;
+    public int scoreToAdd = 100;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            BulletsController.instance.bullets[bulletID-1].currentBullets = BulletsController.instance.bullets[bulletID-1].currentBullets+bulletsToAdd;
-
-            if(BulletsController.instance.bullets[bulletID-1].currentBullets > BulletsController.instance.bullets[bulletID - 1].maxBullets)
-            {
-                BulletsController.instance.bullets[bulletID - 1].currentBullets = BulletsController.instance.bullets[bulletID - 1].maxBullets;
-            }
-
-            this.gameObject.SetActive(false);
+            FindObjectOfType<scoreManager>().addScore(scoreToAdd);
+            Destroy(gameObject);
         }
     }
+
 }

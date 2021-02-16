@@ -16,7 +16,7 @@ public class Checkpoint : MonoBehaviour
             CheckPointController.instance.DeactiveCheckPoint();
             spriteRenderer.sprite = checkPointOnSprite;
             CheckPointController.instance.SetSpawnPoint(transform.position);
-            PlayerController.instance.currentHP = PlayerController.instance.maxHP;
+            //PlayerController.instance.currentHP = PlayerController.instance.maxHP;
         }
     }
 

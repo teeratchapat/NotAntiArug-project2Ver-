@@ -78,3 +78,6 @@ TagManager:
   - name: Collectable Object
     uniqueID: 3099164509
     locked: 0
+  - name: FrontProp
+    uniqueID: 149854029
+    locked: 0
