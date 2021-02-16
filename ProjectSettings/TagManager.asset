@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Platform
+  - Box
+  - Enemy
+  - NPC
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Enemy
+  - Platform
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 1608196925
+    locked: 0
+  - name: IndoorBG
+    uniqueID: 1547934507
+    locked: 0
+  - name: IndoorProp
+    uniqueID: 1845837643
+    locked: 0
+  - name: Platform
+    uniqueID: 415714213
+    locked: 0
+  - name: mainprop
+    uniqueID: 179812033
+    locked: 0
+  - name: Object
+    uniqueID: 1901065509
+    locked: 0
+  - name: Enemy
+    uniqueID: 483404209
+    locked: 0
+  - name: NPC
+    uniqueID: 286391623
+    locked: 0
+  - name: Player
+    uniqueID: 2150903129
+    locked: 0
+  - name: Bullet
+    uniqueID: 102848739
+    locked: 0
+  - name: Collectable Object
+    uniqueID: 3099164509
+    locked: 0
