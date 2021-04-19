@@ -60038,7 +60038,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 10
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -60781,8 +60781,8 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -781294158744790408, guid: cc4e46220a8dc6043b0a580ace17fce4, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 1237908169197521079, guid: cc4e46220a8dc6043b0a580ace17fce4, type: 3}
   - m_RefCount: 0
@@ -60799,8 +60799,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -781294158744790408, guid: cc4e46220a8dc6043b0a580ace17fce4, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: 21300000, guid: 70fdb4b90b4895542a526dd8e636879c, type: 3}
   - m_RefCount: 1
@@ -62933,7 +62933,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145363857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.036, y: 0.217, z: 0}
+  m_LocalPosition: {x: -3.5, y: 3.1, z: 0}
   m_LocalScale: {x: 3.0848262, y: 3.0636137, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
